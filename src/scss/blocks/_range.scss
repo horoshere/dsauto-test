@@ -1,0 +1,39 @@
+.range {    
+    &__wrapper {
+        width: 264px;
+        display: grid;
+        grid-template-columns: repeat(2, 110px);
+        grid-template-rows: repeat(2, 25px);
+        gap: 5px 44px;
+    }
+    &__range{
+        // width: 250px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    &__start {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 12px;
+        color: #828282;
+        span {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 12px;
+            color: #222222;
+        }
+    }
+    &__end {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 12px;
+        color: #828282;
+        span {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 12px;
+            color: #222222;
+        }
+    }
+
+}

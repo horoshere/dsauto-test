@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1504px;// 1100
+    margin: 0 auto;
+}
+
+.btn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: $main_color;
+    // transition: 0.3s all;
+    width: 180px;
+    height: 46px;
+    box-shadow: 0px 4px 25px rgba(255, 184, 0, 0.25);
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 30px;
+    cursor: pointer;
+    &-brands {
+        margin-bottom: 50px;
+    }
+    &-filters {
+        width: 157px;
+        height: 58px;
+        img {
+            margin-left: 14px;
+        }
+    }
+    
+}
+
+.title_mini {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    text-transform: uppercase;
+    height: 25px;
+}
+.subtitle_mini {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 38px;
+    color: #BDBDBD;
+    height: 24px;
+}
+
+.divider {
+    margin-top: 49px;
+    margin-bottom: 29px;
+    border: 1px solid $main_color;
+    border-style: dotted;
+}
+
+.active {
+    &__brand {
+        background-color: $main_color;
+        &-name {
+            color:#fff;
+            &:before {
+                background-color: rgba(255, 255, 255, 0.25);
+            }
+        }
+        &-number {
+            background-color: #fff;
+            color: $main_color;
+        }
+    }
+    &__rectan {
+        background-color: $main_color;
+    }
+}
