@@ -121,29 +121,23 @@ a {
   text-align: center;
 }
 
-.active__brand {
-  background-color: #FFB800;
-}
-.active__brand-name {
-  color: #fff;
-}
-.active__brand-name:before {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-.active__brand-number {
-  background-color: #fff;
+.showtext {
+  display: none;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 9px;
+  line-height: 11px;
+  text-align: center;
+  text-decoration-line: underline;
+  text-transform: uppercase;
   color: #FFB800;
 }
-.active__rectan {
-  background-color: #FFB800;
+
+.heart-mobile {
+  display: none;
 }
-.active__menu {
-  color: #FFB800;
-}
-.active__photo-mini {
-  border: 2px solid #FFB800;
-  border-radius: 5px;
-}
+
+
 
 .header {
   background-color: #f5f5f5;
@@ -409,6 +403,7 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-right: 14px;
+  cursor: pointer;
 }
 .calc__filters-item:last-child {
   margin-right: 0;
@@ -512,7 +507,7 @@ a {
 .cards__photo-rectan {
   width: 54px;
   height: 4px;
-  background: #F6F5FB;
+  background-color: #F6F5FB;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -552,8 +547,26 @@ a {
   position: absolute;
   width: 1px;
   height: 105px;
-  left: 66px;
+  left: 50px;
   top: 7px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.cards__line-two:before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 57px;
+  left: 94px;
+  top: 7px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.cards__line-three:before {
+  content: "";
+  position: absolute;
+  width: 301px;
+  height: 1px;
+  left: -180px;
+  top: 63px;
   background-color: rgba(0, 0, 0, 0.08);
 }
 .cards__price {
@@ -895,14 +908,14 @@ a {
   padding-bottom: 20px;
   padding-left: 20px;
   z-index: 10;
-  display: none;
 }
 .modal__booking ul {
   width: 447px;
+  margin-top: 20px;
   padding-left: 20px;
 }
 .modal__credit {
-  background: url(../img/booking.png) center center/cover no-repeat;
+  background: url(../img/credit.png) center center/cover no-repeat;
   position: relative;
   top: 50%;
   left: 50%;
@@ -914,6 +927,7 @@ a {
   padding-bottom: 20px;
   padding-left: 20px;
   z-index: 10;
+  display: none;
 }
 .modal__credit ul {
   width: 447px;
@@ -943,7 +957,6 @@ a {
   color: #141414;
 }
 .modal__descr {
-  margin-top: 20px;
   font-weight: 500;
   font-size: 20px;
   line-height: 130%;
@@ -993,9 +1006,270 @@ a {
   color: #141414;
 }
 
+.mobile-info {
+  display: none;
+}
+
 @media (max-width: 576px) {
   .container {
     max-width: 100%;
-    padding: 0 10px;
   }
+
+  .header, .navigation, .special, .calc, .cards, .pagetwo {
+    display: none;
+  }
+
+  .duster__menu-item {
+    font-size: 7px;
+    line-height: 9px;
+  }
+  .duster__wrapper {
+    margin-top: 14px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+  .duster__photo-wrapper {
+    display: none;
+  }
+  .duster__title {
+    margin-top: 27px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .duster__subtitle {
+    display: none;
+  }
+  .duster__icons {
+    display: none;
+  }
+  .duster__profit {
+    margin-top: 20px;
+    width: 350px;
+  }
+  .duster__profit-item {
+    width: 172px;
+    height: 54px;
+  }
+  .duster__profit-item img {
+    width: 90%;
+  }
+  .duster__profit-title {
+    font-size: 9px;
+    line-height: 14px;
+  }
+  .duster__profit-subtitle {
+    font-size: 8px;
+    line-height: 12px;
+  }
+  .duster__btns {
+    flex-direction: column;
+  }
+  .duster__price-sum {
+    width: 100px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .duster__price-text {
+    display: none;
+  }
+  .duster__price-rectangle {
+    display: none;
+  }
+  .duster__char {
+    grid-template-columns: repeat(2, 145px);
+    column-gap: 10px;
+  }
+  .duster__char-item-text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+  .duster__char-item-divider {
+    width: 56px;
+    border: 0.5px dashed #828282;
+  }
+  .duster__char-item-bold {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .btn__duster, .btn__duster-light {
+    width: 347px;
+    height: 46px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .duster__btns .btn .btn__duster-light {
+    order: 2;
+  }
+
+  .duster__btns.btn .btn__duster {
+    order: 1;
+  }
+
+  .carinfo {
+    display: none;
+  }
+
+  .mobile-info {
+    display: block;
+    margin-top: 39px;
+  }
+  .mobile-info__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 163px;
+  }
+  .mobile-info__item {
+    padding: 10px 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 348px;
+    height: 37px;
+    border: 1.2px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+  }
+  .mobile-info__name {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 24px;
+    color: #141414;
+  }
+  .mobile-info__plus {
+    width: 16.71px;
+    height: 17px;
+    box-shadow: 0px 2.42857px 7.28571px rgba(0, 0, 0, 0.15);
+    border-radius: 3.03571px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFB800;
+    font-size: 12px;
+  }
+
+  .offer {
+    margin-top: 30px;
+  }
+  .offer__title {
+    font-size: 18px;
+    line-height: 140%;
+  }
+
+  .cards__wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 172px);
+    grid-template-rows: repeat(2, auto);
+    gap: 5px;
+  }
+  .cards__item {
+    width: 172px;
+  }
+  .cards__photo-sticker {
+    width: 57px;
+    height: 13px;
+    font-size: 6px;
+    line-height: 7px;
+    left: -4px;
+  }
+  .cards__photo-rectangles {
+    width: 110px;
+    height: 3px;
+  }
+  .cards__photo-rectan {
+    width: 20px;
+    height: 3px;
+  }
+  .cards__title {
+    margin-top: 12px;
+    margin-left: 14px;
+    margin-bottom: 7px;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 11px;
+  }
+  .cards__descr-wrapper {
+    display: none;
+  }
+  .cards__price {
+    margin-top: 7px;
+    padding-left: 14px;
+  }
+  .cards__price-start {
+    display: none;
+  }
+  .cards__price-finish {
+    font-size: 8px;
+    line-height: 10px;
+  }
+  .cards__price-finish span {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .cards__btns {
+    display: none;
+  }
+
+  .prev, .next {
+    display: none;
+  }
+
+  .showtext {
+    display: block;
+  }
+
+  .modal__booking {
+    width: 375px;
+    background: url(../img/mobile/booking.png) center center/cover no-repeat;
+    border-radius: 0;
+  }
+  .modal__booking ul {
+    width: 339px;
+  }
+  .modal__credit {
+    width: 375px;
+    background: url(../img/mobile/credit.png) center center/cover no-repeat;
+    border-radius: 0;
+  }
+  .modal__credit ul {
+    width: 339px;
+  }
+  .modal__title {
+    width: 320px;
+  }
+  .modal__close {
+    top: 0px;
+    right: 0px;
+  }
+
+  .form {
+    margin-top: 100px;
+  }
+}
+
+.active__brand {
+  background-color: #FFB800;
+}
+.active__brand-name {
+  color: #fff;
+}
+.active__brand-name:before {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.active__brand-number {
+  background-color: #fff;
+  color: #FFB800;
+}
+.active__rectan {
+  background-color: #FFB800;
+}
+.active__menu {
+  color: #FFB800;
+}
+.active__photo-mini {
+  border: 2px solid #FFB800;
+  border-radius: 5px;
 }

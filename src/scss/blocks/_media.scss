@@ -1,7 +1,255 @@
 @media (max-width: 576px) {
   .container {
     max-width: 100%;
-    padding: 0 10px;
+    // width: 348px;
+    // padding: 0 10px;
+  }
+  .header, .navigation, .special, .calc, .cards, .pagetwo {
+    display: none;
+  }
+
+  .duster {
+    &__menu {
+      &-item {
+        font-size: 7px;
+        line-height: 9px;
+      }
+    }
+    &__wrapper {
+      margin-top: 14px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+    }
+    &__photo {
+      // width: 320px;
+      &-wrapper {
+        display: none;
+      }
+    }
+    &__title {
+      margin-top: 27px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__subtitle {
+      display: none;
+    }
+    &__icons {
+      display: none;
+    }
+    &__profit {
+      margin-top: 20px;
+      width: 350px;
+      &-item {
+        width: 172px;
+        height: 54px;
+        img {
+          width: 90%;
+        }
+      }
+      &-title {
+        font-size: 9px;
+        line-height: 14px;
+      }
+      &-subtitle {
+        font-size: 8px;
+        line-height: 12px;    
+      }
+    }
+    &__btns {
+      flex-direction: column;
+    }
+    &__price {
+      &-sum {
+        width: 100px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      &-text {
+        display: none;
+      }
+      &-rectangle {
+        display: none;
+      }
+    }
+    &__char {
+      grid-template-columns: repeat(2, 145px);
+      column-gap: 10px;
+      &-item {
+        &-text {
+          font-size: 11px;
+          line-height: 13px;
+        }
+        &-divider {
+          width: 56px;
+          border: 0.5px dashed #828282;
+        }
+        &-bold {
+          font-size: 11px;
+          line-height: 13px;
+        }
+      }
+    }
+  }
+  .btn__duster, .btn__duster-light {
+    width: 347px;
+    height: 46px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .duster__btns .btn .btn__duster-light {
+    order: 2;
+  }
+  .duster__btns.btn .btn__duster {
+    order: 1;
+  }
+
+  .carinfo {
+    display: none;
+  }
+
+  .mobile-info {
+    display: block;
+    margin-top: 39px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 163px;
+    }
+    &__item {
+      padding: 10px 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 348px;
+      height: 37px;
+      border: 1.2px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.04);
+      border-radius: 5px;
+    }
+    &__name {
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 24px;
+      color: #141414;
+    }
+    &__plus {
+      width: 16.71px;
+      height: 17px;
+      box-shadow: 0px 2.42857px 7.28571px rgba(0, 0, 0, 0.15);
+      border-radius: 3.03571px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $main_color;
+      font-size: 12px;
+    }
   }
   
+  .offer {
+    margin-top: 30px;
+    &__title {
+      font-size: 18px;
+      line-height: 140%;
+    }
+  }
+
+  .cards {
+    &__wrapper {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 172px);
+      grid-template-rows: repeat(2, auto);
+      gap: 5px;
+    }
+    &__item {
+      width: 172px;
+    }
+    &__photo {
+      &-sticker {
+        width: 57px;
+        height: 13px;
+        font-size: 6px;
+        line-height: 7px;
+        left: -4px;
+      }
+      &-rectangles {
+        width: 110px;
+        height: 3px;
+      }
+      &-rectan {
+        width: 20px;
+        height: 3px;
+      }
+    }
+    &__title {
+      margin-top: 12px;
+      margin-left: 14px;
+      margin-bottom: 7px;
+      font-weight: 700;
+      font-size: 9px;
+      line-height: 11px;
+    }
+    &__descr-wrapper {
+      display: none;
+    }
+    &__price {
+      margin-top: 7px;
+      padding-left: 14px;
+      &-start {
+        display: none;
+      }
+      &-finish {
+        font-size: 8px;
+        line-height: 10px;
+        span {
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+    }
+    &__btns {
+      display: none;
+    }
+  }
+  .heart-mobile {
+    // display: block;
+  }
+
+  .prev, .next {
+    display: none;
+  }
+  .showtext {
+    display: block;
+  }
+
+  .modal {
+    &__booking {
+      width: 375px;
+      background: url(../img/mobile/booking.png) center center/cover no-repeat;
+      border-radius: 0;
+      ul {
+        width: 339px;
+      }
+    }
+    &__credit {
+      width: 375px;
+      background: url(../img/mobile/credit.png) center center/cover no-repeat;
+      border-radius: 0;
+      ul {
+        width: 339px;
+      }
+    }
+    &__title {
+      width: 320px;
+    }
+    &__close {
+      top: 0px;
+      right: 0px;
+    }
+  }
+  .form {
+    margin-top: 100px;
+  }
 }

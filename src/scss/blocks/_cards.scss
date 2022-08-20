@@ -64,7 +64,7 @@
         &-rectan {
             width: 54px;
             height: 4px;
-            background: #F6F5FB;
+            background-color: #F6F5FB;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -109,8 +109,30 @@
             position: absolute;
             width: 1px;
             height: 105px;
-            left: 66px;
+            left: 50px;
             top: 7px;
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+    }
+    &__line-two {
+        &:before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 57px;
+            left: 94px;
+            top: 7px;
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+    }
+    &__line-three {
+        &:before {
+            content: '';
+            position: absolute;
+            width: 301px;
+            height: 1px;
+            left: -180px;
+            top: 63px;
             background-color: rgba(0, 0, 0, 0.08);
         }
     }
