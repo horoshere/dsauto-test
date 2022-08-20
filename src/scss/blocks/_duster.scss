@@ -1,0 +1,187 @@
+.duster {
+    margin-top: 151px;
+    // height: 677px;
+    &__menu {
+        display: flex;
+        justify-content: start;
+        &-item {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            color: #000000;
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &__wrapper {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 832px 605px;
+        column-gap: 67px;
+    }
+    &__photo {
+        img {
+            width: 100%;
+        }
+        &-wrapper {
+            margin-top: 17px;
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+        }
+        &-mini {
+            width: 160px;
+            height: 110px;
+            img {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 58px;
+        text-transform: uppercase;
+        color: #141414;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #828282;
+        span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $main_color;
+        }
+    }
+    &__icons {
+        margin-top: 29px;
+        display: flex;
+        justify-content: space-between;
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 140px;
+            height: 72px;
+            background: #F6F5FB;
+            border-radius: 5px;
+            &-text {
+                margin-left: 10px;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 24px;
+                color: #141414;
+            }
+        }
+    }
+    &__profit {
+        margin-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-item {
+            width: 295px;
+            height: 64px;
+            padding: 8px 13px 11px 19px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
+            img {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                align-self: center;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 24px;
+            text-transform: uppercase;
+            color: $main_color;
+        }
+        &-subtitle {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 20px;
+            color: #141414;
+        }
+    }
+    &__price {
+        margin-top: 29px;
+        display: flex;
+        justify-content: space-between;
+        height: 33px;
+        &-sum {
+            width: 199px;
+            font-weight: 600;
+            font-size: 33px;
+            line-height: 32px;
+        }
+        &-text {
+            width: 171px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            color: $main_color;
+        }
+        &-rectangle {
+            width: 203px;
+            height: 32px;
+            background: #FFEAB1;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 20px;
+            text-align: center;
+            color: #141414;
+            padding-top: 5px;
+            span {
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 20px;
+            }
+        }
+    }
+    &__btns {
+        margin-top: 28px;
+        display: flex;
+    }
+    &__char {
+        margin-top: 27px;
+        display: grid;
+        grid-template-columns: repeat(2, 271px);
+        grid-template-rows: repeat(3, auto);
+        column-gap: 65px;
+        &-item {
+            display: flex;
+            align-items: flex-end;
+            height: 38px;
+            &-text {
+                font-weight: 400;
+                font-size: 15px;
+                color: #828282;
+                margin-right: 10px;
+            }
+            &-divider {
+                width: 78px;
+                height: 0px;
+                border: 1px dashed #BDBDBD;
+                margin-right: 10px;
+            }
+            &-bold {
+                font-weight: 600;
+                font-size: 15px;
+                color: #141414;
+            }
+        }
+    }
+}

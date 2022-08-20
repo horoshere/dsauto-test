@@ -1,0 +1,34 @@
+.carinfo {
+    margin-top: 100px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 20px;
+        color: #141414;
+        margin-bottom: 20px;
+    }
+    &__text {
+        line-height: 30px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: $main_color;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+    }
+    &__column {
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+    }
+}

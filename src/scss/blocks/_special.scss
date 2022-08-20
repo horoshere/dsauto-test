@@ -4,17 +4,11 @@
         width: 185px;
         display: flex;
         justify-content: space-between;
-        &-main {
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 14.63px;
-            color: #000000;
-        }
-        &-special {
+        &-item {
             font-weight: 400;
             font-size: 12px;
             line-height: 15px;
-            color: $main_color;
+            color: #000000;
         }
     }
     &__title {

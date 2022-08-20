@@ -1,0 +1,17 @@
+.form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 339px;
+    input {
+      height: 31px;
+      background: #FFFFFF;
+      margin-bottom: 10px;
+      border: none;
+      border-bottom: 2px solid $main_color;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #141414;
+    }
+  }
